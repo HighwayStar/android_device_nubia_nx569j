@@ -1553,12 +1553,12 @@ void QCameraVideoMemory::deallocate()
 camera_memory_t *QCameraVideoMemory::getMemory(uint32_t index,
         bool metadata) const
 {
-    int i;
     if (index >= mMetaBufCount || (!metadata && index >= mBufferCount))
         return NULL;
 
     if (metadata) {
 #ifdef USE_MEDIA_EXTENSIONS
+	int i;
         media_metadata_buffer *packet = NULL;
 
         for (i = 0; i < mMetaBufCount; i++) {

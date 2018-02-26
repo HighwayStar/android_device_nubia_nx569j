@@ -234,6 +234,7 @@ typedef struct{
     /* supported focus modes */
     size_t supported_focus_modes_cnt;
     cam_focus_mode_type supported_focus_modes[CAM_FOCUS_MODE_MAX];
+    volatile char         nubia_reserved1[4];
 
     /* supported manual focus position */
     float min_focus_pos[CAM_MANUAL_FOCUS_MODE_MAX];
@@ -249,6 +250,7 @@ typedef struct{
 
     size_t picture_sizes_tbl_cnt;                           /* picture sizes table size */
     cam_dimension_t picture_sizes_tbl[MAX_SIZES_CNT];       /* picture sizes table */
+    volatile char         nubia_reserved3[4];
     /* The minimum frame duration that is supported for each
      * resolution in availableProcessedSizes. Should correspond
      * to the frame duration when only that processed stream
@@ -555,8 +557,10 @@ typedef struct{
     uint8_t vc[MAX_SIZES_CNT];
     uint8_t dt[MAX_SIZES_CNT];
     cam_format_t supported_meta_raw_fmts[CAM_FORMAT_MAX];
+    volatile char         nubia_reserved4[104];
     cam_dimension_t raw_meta_dim[MAX_SIZES_CNT];
     cam_sub_format_type_t sub_fmt[CAM_FORMAT_SUBTYPE_MAX];
+    volatile char         nubia_reserved5[8200];
 } cam_capability_t;
 
 typedef enum {
@@ -1010,10 +1014,45 @@ typedef struct {
     INCLUDE(CAM_INTF_AF_STATE_TRANSITION,               uint8_t,                     1);
     INCLUDE(CAM_INTF_PARM_INITIAL_EXPOSURE_INDEX,       uint32_t,                    1);
     INCLUDE(CAM_INTF_PARM_INSTANT_AEC,                  uint8_t,                     1);
+    volatile char nubia_reserved1[3];
+    //3 bytes
+    INCLUDE(NUBIA_10,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_07,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_08,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_09,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_11,                                   uint8_t,                     24);
+    INCLUDE(NUBIA_12,                                   uint8_t,                     60);
+    INCLUDE(NUBIA_13,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_14,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_15,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_16,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_17,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_18,                                   uint8_t,                     4);
     INCLUDE(CAM_INTF_META_REPROCESS_FLAGS,              uint8_t,                     1);
     INCLUDE(CAM_INTF_PARM_JPEG_ENCODE_CROP,             cam_stream_crop_info_t,      1);
     INCLUDE(CAM_INTF_PARM_JPEG_SCALE_DIMENSION,         cam_dimension_t,             1);
     INCLUDE(CAM_INTF_META_FOCUS_DEPTH_INFO,             uint8_t,                     1);
+    volatile char nubia_reserved2[3];
+    //3 bytes
+    INCLUDE(NUBIA_01,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_02,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_03,                                   uint8_t,                     1);
+    volatile char nubia_reserved3[3];
+    //3bytes
+    INCLUDE(NUBIA_04,                                   uint8_t,                     8);
+    INCLUDE(NUBIA_05,                                   uint8_t,                     691216);
+    INCLUDE(NUBIA_06,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_19,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_20,                                   uint8_t,                     4);
+
+    INCLUDE(NUBIA_22,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_23,                                   uint8_t,                     1);
+    volatile char nubia_reserved4[3];
+    //3bytes
+    INCLUDE(NUBIA_24,                                   uint8_t,                     4);
+    INCLUDE(NUBIA_25,                                   uint8_t,                     16);
+    INCLUDE(NUBIA_27,                                   uint8_t,                     1);//FIXME
+    INCLUDE(NUBIA_21,                                   uint8_t,                     10);//FIXME
 } metadata_data_t;
 
 /* Update clear_metadata_buffer() function when a new is_xxx_valid is added to

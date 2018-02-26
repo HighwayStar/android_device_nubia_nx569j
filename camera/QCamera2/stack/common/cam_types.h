@@ -620,6 +620,20 @@ typedef enum {
     CAM_ISO_MODE_800,
     CAM_ISO_MODE_1600,
     CAM_ISO_MODE_3200,
+    NUBIA_ISO_1,
+    NUBIA_ISO_2,
+    NUBIA_ISO_3,
+    NUBIA_ISO_4,
+    NUBIA_ISO_5,
+    NUBIA_ISO_6,
+    NUBIA_ISO_7,
+    NUBIA_ISO_8,
+    NUBIA_ISO_9,
+    NUBIA_ISO_10,
+    NUBIA_ISO_11,
+    NUBIA_ISO_12,
+    NUBIA_ISO_13,
+    NUBIA_ISO_14,
     CAM_ISO_MODE_MAX
 } cam_iso_mode_type;
 
@@ -1322,6 +1336,7 @@ typedef struct {
 typedef struct {
     uint32_t scale;
     float diopter;
+    volatile char nubia_reserved[4];
 } cam_focus_pos_info_t ;
 
 typedef struct {
@@ -1524,6 +1539,7 @@ typedef struct {
     int32_t est_snap_iso_value;
     uint32_t est_snap_luma;
     uint32_t est_snap_target;
+    volatile char nubia_reserved[44];
 } cam_3a_params_t;
 
 typedef struct {
@@ -1544,6 +1560,7 @@ typedef struct {
     int32_t cct_value;
     cam_awb_gain_t rgb_gains;
     cam_awb_ccm_update_t ccm_update;
+    volatile char nubia_reserved[4];
 } cam_awb_params_t;
 
 typedef struct {
@@ -2198,32 +2215,59 @@ typedef enum {
     /* Whether EIS is enabled */
     CAM_INTF_META_VIDEO_STAB_MODE,
     /* Touch exposure compensation (EV) status */
-    CAM_INTF_META_TOUCH_AE_RESULT,
+    CAM_INTF_META_TOUCH_AE_RESULT, //218
     /* Param for updating initial exposure index value*/
-    CAM_INTF_PARM_INITIAL_EXPOSURE_INDEX,
+    CAM_INTF_PARM_INITIAL_EXPOSURE_INDEX, //219
     /* Gain applied post raw captrue.
        ISP digital gain */
     CAM_INTF_META_ISP_SENSITIVITY,
+    NUBIA_01, //221 present in stock QCameraParameters::setFusionCppParams
+    NUBIA_02, //222 QCameraParameters::getSensorDacValue
+    NUBIA_03, //223 QCameraParameters::setHDRFusionMode
+    NUBIA_04, //224 something QCamera2HardwareInterface::alCMFusionParameterGet related
+    NUBIA_05, //225 QCameraParametersIntf::getAL3DSyncType
+    NUBIA_06, //226 QCameraParameters::setAL3200_SCID
     /* Param for enabling instant aec*/
-    CAM_INTF_PARM_INSTANT_AEC,
+    CAM_INTF_PARM_INSTANT_AEC,//oss 221 blob 227 
     /* Param for tracking previous reprocessing activity */
-    CAM_INTF_META_REPROCESS_FLAGS,
+    CAM_INTF_META_REPROCESS_FLAGS, //blob 228
     /* Param of cropping information for JPEG encoder */
-    CAM_INTF_PARM_JPEG_ENCODE_CROP,
+    CAM_INTF_PARM_JPEG_ENCODE_CROP, //blob 229
     /* Param of scaling information for JPEG encoder */
     CAM_INTF_PARM_JPEG_SCALE_DIMENSION,
     /*Param for updating Quadra CFA mode */
-    CAM_INTF_PARM_QUADRA_CFA,
+    CAM_INTF_PARM_QUADRA_CFA, //oss 225 blob 231
     /* Meta Raw Dim */
     CAM_INTF_META_RAW,
     /* Number of streams and size of streams in
        current configuration for pic res*/
     CAM_INTF_META_STREAM_INFO_FOR_PIC_RES,
-    CAM_INTF_META_FOCUS_DEPTH_INFO,
+    CAM_INTF_META_FOCUS_DEPTH_INFO, //blob 234
     /*Focus value output from af core*/
     CAM_INTF_META_FOCUS_VALUE,
     /*Spot light detection result output from af core*/
     CAM_INTF_META_SPOT_LIGHT_DETECT,
+    NUBIA_07, //237 QCameraParameters::adjustExposureTime
+    NUBIA_08, //238 QCameraParameters::setSlowShutterMode
+    NUBIA_09, //239 QCameraParameters::adjustExposureTime
+    NUBIA_10, //240 QCameraMuxer::composeMpo
+    NUBIA_11, //241 QCameraParameters::setMwbAreas
+    NUBIA_12, //242 QCameraParameters::readSensorDngData
+    NUBIA_13, //243 QCameraParameters::setCameraAppMode
+    NUBIA_14, //244 QCameraMuxer::storeJpeg ?
+    NUBIA_15, //245 QCameraParameters::setBacklightFlashState
+    NUBIA_16, //246 QCameraParameters::setSharpness
+    NUBIA_17, //247 QCameraParameters::setZtemtEffect
+    NUBIA_18, //248 QCameraParameters::setReprocCount
+    NUBIA_19, //249 QCameraParameters::isOptiZoomEnabled
+    NUBIA_20, //250 QCameraParameters::set_zte_recording_startstop
+    NUBIA_21, //251 QCameraParameters::setCDSMode
+    NUBIA_22, //252 QCameraParameters::setEffect
+    NUBIA_23,
+    NUBIA_24,
+    NUBIA_25,
+    NUBIA_26,
+    NUBIA_27,
     CAM_INTF_PARM_MAX
 } cam_intf_parm_type_t;
 

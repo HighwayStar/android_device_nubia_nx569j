@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
     sap.conf \
     xtwifi.conf
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8952
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config

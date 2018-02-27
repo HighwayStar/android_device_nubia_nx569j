@@ -72,10 +72,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8952 \
     memtrack.msm8952
 
-# Display / OpenGLES
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610 \
-    ro.sf.lcd_density=480
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # GPS
 PRODUCT_PACKAGES += \

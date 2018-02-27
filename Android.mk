@@ -27,6 +27,60 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),nx569j)
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+include $(CLEAR_VARS)
+
+RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT)/rfs/msm/adsp/
+$(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MSM ADSP folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly
+	$(hide) ln -sf /data/tombstones/lpass $@/ramdumps
+	$(hide) ln -sf /persist/rfs/msm/adsp $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+
+RFS_MSM_MPSS_SYMLINKS := $(TARGET_OUT)/rfs/msm/mpss/
+$(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MSM MPSS folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly
+	$(hide) ln -sf /data/tombstones/modem $@/ramdumps
+	$(hide) ln -sf /persist/rfs/msm/mpss $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+
+ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
+
+WLAN_PERSIST_INI_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+>>>>>>> 0937203... fixup! nx569: add wifi configs and packages
+$(WLAN_PERSIST_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS persist config ini link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /persist/WCNSS_qcom_cfg.ini $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WLAN_PERSIST_INI_SYMLINK)
+
+WCNSS_PERSIST_FW_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+$(WCNSS_PERSIST_FW_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS persist config ini link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /persist/WCNSS_qcom_wlan_nv.bin $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_PERSIST_FW_SYMLINK)
+
+WCNSS_PERSIST_DICT_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+$(WCNSS_PERSIST_DICT_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS persist config ini link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /persist/WCNSS_wlan_dictionary.dat $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_PERSIST_DICT_SYMLINK)
 
 endif

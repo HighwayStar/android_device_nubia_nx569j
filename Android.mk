@@ -56,7 +56,6 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
 
 WLAN_PERSIST_INI_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
->>>>>>> 0937203... fixup! nx569: add wifi configs and packages
 $(WLAN_PERSIST_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS persist config ini link: $@"
 	@mkdir -p $(dir $@)

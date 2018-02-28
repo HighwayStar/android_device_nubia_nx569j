@@ -23,6 +23,16 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
+
+PRODUCT_COPY_FILES += \
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
+
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -209,6 +219,14 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# RIL
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libxml2 \
+    libqsap_sdk \
+    telephony-ext \
+    libminui
 
 # Sensors
 PRODUCT_PACKAGES += \

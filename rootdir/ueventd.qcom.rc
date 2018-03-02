@@ -251,3 +251,6 @@
 
 # Add device block for FRP
 /dev/block/platform/soc.0/7824900.sdhci/by-name/config    0660   system     system
+
+#nfc permissions
+/dev/bcm2079x         0660    nfc         nfc

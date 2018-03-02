@@ -157,6 +157,18 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# NFC
+PRODUCT_PACKAGES += \
+    nfc_nci.bcm2079x.default \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/nfc/libnfc-brcm-20797b00.conf:system/etc/libnfc-brcm-20797b00.conf \
+    $(LOCAL_PATH)/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \

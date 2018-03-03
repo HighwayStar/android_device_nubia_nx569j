@@ -257,3 +257,10 @@
 
 # goodix fp
 /dev/goodix_fp        0644    system      system
+
+# nubia led
+/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   blink_mode       0660    input   system
+/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   brightness       0660    input   system
+/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   fade_parameter   0660    input   system
+/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   grade_parameter  0660    input   system
+/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   outn             0660    input   system

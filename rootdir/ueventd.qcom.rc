@@ -254,3 +254,6 @@
 
 #nfc permissions
 /dev/bcm2079x         0660    nfc         nfc
+
+# goodix fp
+/dev/goodix_fp        0644    system      system

@@ -90,6 +90,10 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8952 \
@@ -239,6 +243,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# Ramdisk nubia specific
+PRODUCT_PACKAGES += \
+    init.nb.rc
 
 # RIL
 PRODUCT_PACKAGES += \

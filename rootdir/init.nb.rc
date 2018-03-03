@@ -1,0 +1,15 @@
+# Copyright (c) 2016, nubia. All rights reserved.
+#
+# init.nb.rc
+# For all nubia projects defined in device/zte
+
+#import init.nb.sensor.rc
+
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
+
+service gx_fpd /system/bin/gx_fpd
+    class late_start
+    user system
+    group system

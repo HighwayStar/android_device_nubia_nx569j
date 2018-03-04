@@ -368,10 +368,19 @@ lib64/libfp_client.so
 lib64/libfpnav.so
 lib64/libfpservice.so
 
+
 # NFC
 lib64/hw/nfc_nci.bcm2079x.default.so
 vendor/firmware/Generic_unsigned_70ms.ncd
 vendor/firmware/Generic_unsigned_119_1.ncd
 vendor/firmware/Generic_unsigned_NVM.ncd
 vendor/firmware/Generic_unsigned_OK.ncd
+
+# Touchscreen firmware
+etc/firmware/nubia_tp_jdi_fw.img
+etc/firmware/nubia_tp_ofilm_fw_ctcr.img
+etc/firmware/nubia_tp_ofilm_fw_ctct.img
+
+# USB firmware
+etc/firmware/ice40.bin
 

@@ -264,3 +264,46 @@
 /sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   fade_parameter   0660    input   system
 /sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   grade_parameter  0660    input   system
 /sys/devices/soc.0/7af6000.i2c/i2c-6/6-0045/leds/nubia_led   outn             0660    input   system
+
+# nubia proximity sensor
+/sys/devices/virtual/proximity/proximity                     chip_name        0644    system  system
+/sys/devices/virtual/proximity/proximity                     debug            0644    system  system
+/sys/devices/virtual/proximity/proximity                     enable           0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_data_max    0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_debug       0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_detect      0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_gain        0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_init        0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_offset      0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_offset_cal  0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_persist     0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_raw         0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_regs        0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_thres       0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_thres_max   0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_thres_min   0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_uncover_max 0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_uncover_min 0644    system  system
+/sys/devices/virtual/proximity/proximity                     prox_value       0644    system  system
+
+
+# nubia light sensor
+/sys/devices/virtual/light/light                             als_Itime        0644    system  system
+/sys/devices/virtual/light/light                             als_Wtime        0644    system  system
+/sys/devices/virtual/light/light                             als_auto_gain    0644    system  system
+/sys/devices/virtual/light/light                             als_ch0          0644    system  system
+/sys/devices/virtual/light/light                             als_ch1          0644    system  system
+/sys/devices/virtual/light/light                             als_cpl          0644    system  system
+/sys/devices/virtual/light/light                             als_gain         0644    system  system
+/sys/devices/virtual/light/light                             als_lux_table    0644    system  system
+/sys/devices/virtual/light/light                             als_persist      0644    system  system
+/sys/devices/virtual/light/light                             als_thresh_deltaP 0644    system  system
+/sys/devices/virtual/light/light                             calibrate        0644    system  system
+/sys/devices/virtual/light/light                             chip_name        0644    system  system
+/sys/devices/virtual/light/light                             debug            0644    system  system
+/sys/devices/virtual/light/light                             delay            0644    system  system
+/sys/devices/virtual/light/light                             dev_init         0644    system  system
+/sys/devices/virtual/light/light                             enable           0644    system  system
+/sys/devices/virtual/light/light                             fac_calibrate    0644    system  system
+/sys/devices/virtual/light/light                             flush            0644    system  system
+/sys/devices/virtual/light/light                             light_value      0644    system  system

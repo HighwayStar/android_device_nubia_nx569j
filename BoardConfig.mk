@@ -152,6 +152,9 @@ USE_DEVICE_SPECIFIC_GPS := true
 USE_DEVICE_SPECIFIC_LOC_API := true
 TARGET_NO_RPC := true
 
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -176,6 +179,7 @@ TARGET_POWERHAL_VARIANT := qcom
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom

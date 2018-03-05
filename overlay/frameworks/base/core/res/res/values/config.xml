@@ -250,4 +250,7 @@
 
     <!-- flag to indicate if EF LI/EF PL should be used for system language -->
     <bool name="config_use_sim_language_file">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 </resources>

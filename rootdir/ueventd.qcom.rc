@@ -307,3 +307,8 @@
 /sys/devices/virtual/light/light                             fac_calibrate    0644    system  system
 /sys/devices/virtual/light/light                             flush            0644    system  system
 /sys/devices/virtual/light/light                             light_value      0644    system  system
+
+
+# touchscreen
+/sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input1     wake_gesture     0644    system  system
+/sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input1     0dbutton         0644    system  system

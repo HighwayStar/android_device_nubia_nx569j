@@ -296,7 +296,8 @@ case "$target" in
                            fi
                            ;;
                        "MTP" | "QRD")
-                           setprop qemu.hw.mainkeys 0
+# disable on screen keys for nubia (has hardware keys)
+#                           setprop qemu.hw.mainkeys 0
                            ;;
                   esac
                   ;;

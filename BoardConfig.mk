@@ -125,6 +125,13 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # CNE
 BOARD_USES_QCNE := true
 
+# CMHW
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    hardware/cyanogen/cmhw \
+    $(DEVICE_PATH)/cmhw
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input1/wake_gesture"
+
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_C2D_COMPOSITION := true

@@ -470,9 +470,6 @@ vendor/lib64/libTimeService.so
 vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
 
-# WiFi
-bin/wcnss_service
-
 # WideVine - from bullhead
 vendor/lib/libwvdrm_L1.so|3eaf8ed1cb337608a1ccdb80d2c95804e7aea323
 vendor/lib/libwvm.so|59c4c078f4b897ddac8f665309b7a3f25522f207

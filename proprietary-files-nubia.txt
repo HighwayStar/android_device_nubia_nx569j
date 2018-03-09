@@ -31,7 +31,6 @@ etc/firmware/SCTable.asb
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8952.so
 lib/libAlgorithm.so
 lib/libalRnBLV.so
 lib/libalRnB.so
@@ -55,9 +54,7 @@ lib/libBurstProcessJni.so
 lib/libdngcreator.so
 lib/libhistutil.so
 lib/libIndependenceUtil.so
-lib/libmmcamera_interface.so
 lib/libmmcamera_nubiacustpro.so
-lib/libmmjpeg_interface.so
 lib/libmorpho_panorama_gp.so
 lib/libmulti_exposure.so
 lib/libmpbase.so
@@ -98,6 +95,7 @@ lib64/libproductinfo.so
 vendor/lib/libChamomilePA.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
+vendor/lib/libfastcvopt.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
@@ -195,6 +193,7 @@ vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
+vendor/lib/libremosaic_daemon.so
 vendor/lib/libts_detected_face_hal.so
 vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libseemore.so
@@ -370,11 +369,14 @@ lib64/libfpservice.so
 
 
 # NFC
-lib64/hw/nfc_nci.bcm2079x.default.so
+lib64/hw/nfc_nci.bcm2079x.default.so:vendor/lib64/hw/nfc_nci.msm8952.so
 vendor/firmware/Generic_unsigned_70ms.ncd
 vendor/firmware/Generic_unsigned_119_1.ncd
 vendor/firmware/Generic_unsigned_NVM.ncd
 vendor/firmware/Generic_unsigned_OK.ncd
+
+# Sensors
+lib64/sensors.oem.so
 
 # Touchscreen firmware
 etc/firmware/nubia_tp_jdi_fw.img

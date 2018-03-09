@@ -12,5 +12,5 @@
 /dev/block/bootdevice/by-name/config                        /frp         emmc    defaults                                                                 defaults
 /dev/block/bootdevice/by-name/cache                         /cache       ext4    rw,noatime,nosuid,nodev,barrier=1,data=ordered                           wait,check,formattable
 
-/devices/soc/7864900.sdhci/mmc_host*                        auto         auto    defaults                                                                 voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/soc/7000000.ssusb/7000000.dwc3/xhci-hcd.0.auto*    auto         auto    defaults                                                                 voldmanaged=usb:auto
+/devices/soc.0/7864900.sdhci/mmc_host*                        auto         auto    defaults                                                                 voldmanaged=sdcard1:auto,encryptable=footer
+/devices/platform/msm_hsusb_host/usb*    auto         auto    defaults                                                                 voldmanaged=usb:auto

@@ -47,6 +47,9 @@ vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
+vendor/bin/wcnss_filter
+-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Charger
 bin/hvdcp_opti:vendor/bin/hvdcp_opti

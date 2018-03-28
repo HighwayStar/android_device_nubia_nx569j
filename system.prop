@@ -1,32 +1,32 @@
 # Audio
 af.fast_track_multiplier=1
-audio_hal.period_size=192
+vendor.audio_hal.in_period_size=192
 audio.deep_buffer.media=true
-audio.dolby.ds2.enabled=true
-audio.offload.buffer.size.kb=64
-audio.offload.gapless.enabled=true
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.offload.buffer.size.kb=64
+vendor.audio.offload.gapless.enabled=true
 audio.offload.min.duration.secs=30
-audio.offload.multiple.enabled=false
-audio.offload.pcm.16bit.enable=false
-audio.offload.pcm.24bit.enable=false
-audio.offload.track.enable=false
+vendor.audio.offload.multiple.enabled=false
+vendor.audio.offload.track.enable=false
 audio.offload.video=false
-audio.playback.mch.downsample=true
-audio.safx.pbe.enabled=true
+vendor.audio.playback.mch.downsample=true
+vendor.audio.safx.pbe.enabled=true
 
-persist.audio.fluence.speaker=false
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-ro.qc.sdk.audio.fluencetype=fluence
-voice.voip.conc.disabled=false
+persist.vendor.audio.fluence.speaker=false
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+ro.vendor.audio.sdk.fluencetype=fluence
+vendor.voice.voip.conc.disabled=false
 
-ro.qc.sdk.audio.ssr=false
-tunnel.audio.encode=false
-use.voice.path.for.pcm.voip=true
-voice.conc.fallbackpath=deep-buffer
-voice.playback.conc.disabled=true
-voice.record.conc.disabled=false
+ro.vendor.audio.sdk.ssr=false
+vendor.audio.tunnel.encode=false
+vendor.voice.path.for.pcm.voip=true
+vendor.voice.conc.fallbackpath=deep-buffer
+vendor.voice.playback.conc.disabled=true
+vendor.audio.rec.playback.conc.disabled=false
 
+#property for AudioSphere Post processing
+vendor.audio.pp.asphere.enabled=false
 
 # Bluetooth
 bluetooth.hfp.client=1
@@ -104,8 +104,8 @@ telephony.lteOnCdmaDevice=1
 
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.multisim.config=dsds
-persist.radio.rat_on=combine
-persist.radio.sib16_support=1
+persist.vendor.radio.sib16_support=1
+persist.vendor.radio.rat_on=combine
 
 # Storage
 
@@ -131,9 +131,6 @@ persist.fuse_sdcard=true
 
 #System property for FM transmitter
 ro.fm.transmitter=false
-
-#property for AudioSphere Post processing
-audio.pp.asphere.enabled=false
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1

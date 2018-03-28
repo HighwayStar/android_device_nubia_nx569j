@@ -55,7 +55,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
 
-WLAN_PERSIST_INI_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+WLAN_PERSIST_INI_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 $(WLAN_PERSIST_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS persist config ini link: $@"
 	@mkdir -p $(dir $@)
@@ -64,7 +64,7 @@ $(WLAN_PERSIST_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WLAN_PERSIST_INI_SYMLINK)
 
-WCNSS_PERSIST_FW_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+WCNSS_PERSIST_FW_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 $(WCNSS_PERSIST_FW_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS persist config ini link: $@"
 	@mkdir -p $(dir $@)
@@ -73,7 +73,7 @@ $(WCNSS_PERSIST_FW_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_PERSIST_FW_SYMLINK)
 
-WCNSS_PERSIST_DICT_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+WCNSS_PERSIST_DICT_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 $(WCNSS_PERSIST_DICT_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS persist config ini link: $@"
 	@mkdir -p $(dir $@)

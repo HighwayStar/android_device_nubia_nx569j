@@ -5,9 +5,6 @@
 
 #import init.nb.sensor.rc
 
-on init
-    export LD_SHIM_LIBS "/system/lib/libNubiaImageAlgorithm.so|libshim_camera.so:/system/lib64/libNubiaImageAlgorithm.so|libshim_camera.so::/system/bin/mediaserver|libshims_cameraservice.so"
-
 service fingerprintd /system/bin/fingerprintd
     class late_start
     user system

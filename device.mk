@@ -80,7 +80,6 @@ PRODUCT_PACKAGES += \
 
 # Camera libshims
 PRODUCT_PACKAGES += \
-    libshim_camera \
     libshims_cameraservice
 
 # Connectivity Engine support (CNE)

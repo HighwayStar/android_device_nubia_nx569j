@@ -351,6 +351,9 @@ PRODUCT_PACKAGES += \
     telephony-ext \
     libminui
 
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \

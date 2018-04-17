@@ -355,12 +355,12 @@ vendor/lib/libchromatix_s5k3p3_zsl_preview_dw9800.so
 vendor/lib/libchromatix_s5k3p3_zsl_video_dw9800.so
 
 # Fingerprint
-bin/gx_fpd
-lib64/hw/fingerprint.default.so
-lib64/hw/gxfingerprint.default.so
-lib64/libfp_client.so
-lib64/libfpnav.so
-lib64/libfpservice.so
+vendor/bin/gx_fpd
+lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.default.so
+lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
+lib64/libfp_client.so:vendor/lib64/libfp_client.so
+lib64/libfpnav.so:vendor/lib64/libfpnav.so
+lib64/libfpservice.so:vendor/lib64/libfpservice.so
 
 
 # NFC

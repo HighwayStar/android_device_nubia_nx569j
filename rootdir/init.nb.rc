@@ -5,13 +5,8 @@
 
 #import init.nb.sensor.rc
 
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    writepid /dev/cpuset/system-background/tasks
-
-service gx_fpd /system/bin/gx_fpd
-    class late_start
+service gx_fpd /system/vendor/bin/gx_fpd
+    class core
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
@@ -33,3 +28,6 @@ on boot
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
+
+on property:persist.sys.fp.onstart=1
+   start fps_hal

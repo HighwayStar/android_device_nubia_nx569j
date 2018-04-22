@@ -246,7 +246,8 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    nfc_nci.bcm2079x.default \
+    android.hardware.nfc@1.0-impl-bcm \
+    android.hardware.nfc@1.0-service \
     com.android.nfc_extras \
     NfcNci \
     Tag

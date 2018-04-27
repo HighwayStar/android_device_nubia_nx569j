@@ -11,6 +11,13 @@ service gx_fpd /system/vendor/bin/gx_fpd
     group system
     writepid /dev/cpuset/system-background/tasks
 
+on early-boot
+     # SSR Setup
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
+
 on boot
     # Update foreground cpuset now that processors are up
     # reserve CPU 3 for the top app and camera daemon

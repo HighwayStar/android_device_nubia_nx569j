@@ -46,6 +46,13 @@ write_makefiles "$MY_DIR"/proprietary-files-nubia.txt
 echo "" >> "$PRODUCTMK"
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 
+cat << EOF >> "$ANDROIDMK"
+
+\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
+\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib64/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
+
+EOF
+
 # Blobs for TWRP data decryption
 cat << EOF >> "$BOARDMK"
 ifeq (\$(WITH_TWRP),true)

@@ -191,6 +191,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input1/wake_gesture"
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 

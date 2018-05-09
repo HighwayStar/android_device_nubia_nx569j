@@ -185,7 +185,7 @@ TARGET_PER_MGR_ENABLED := true
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input1/wake_gesture"
-
+TARGET_HAS_NO_WIFI_STATS := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true

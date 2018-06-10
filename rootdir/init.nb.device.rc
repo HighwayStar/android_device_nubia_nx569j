@@ -1,0 +1,11 @@
+# Copyright (c) 2016, nubia. All rights reserved.
+#
+# init.nb.rc
+# For all nubia projects defined in device/zte
+
+service gx_fpd /system/bin/gx_fpd
+    class core
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
+

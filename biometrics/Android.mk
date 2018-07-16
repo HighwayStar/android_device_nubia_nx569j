@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.nubia_nx569j
 LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.1-service.nubia_nx569j.rc
-LOCAL_PROPRIETARY_MODULE := true
+LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := \
     BiometricsFingerprint.cpp \

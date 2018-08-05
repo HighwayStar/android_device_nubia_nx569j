@@ -234,7 +234,6 @@ typedef struct{
     /* supported focus modes */
     size_t supported_focus_modes_cnt;
     cam_focus_mode_type supported_focus_modes[CAM_FOCUS_MODE_MAX];
-    volatile char         nubia_reserved1[4];
 
     /* supported manual focus position */
     float min_focus_pos[CAM_MANUAL_FOCUS_MODE_MAX];

@@ -9,17 +9,6 @@ vendor/lib/libfastcvadsp_stub.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
-# ADSP modules
-vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
-vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
-./lib/rfsa/adsp/libqvr_adsp_driver_skel.so
-
 # Audio libraries
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -151,10 +140,6 @@ vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
-
-# Firmwares
-etc/firmware/DE.o.msm8952
-etc/firmware/DE.o.msm8976
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8952.so

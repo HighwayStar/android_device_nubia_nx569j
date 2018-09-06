@@ -47,6 +47,7 @@ on charger
     enable qcom-usb-sh
     start qcom-usb-sh
     setprop sys.usb.config mass_storage
+    setprop sys.usb.ffs.aio_compat 1
 
 on boot
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
@@ -995,6 +996,9 @@ on property:sys.usb.config=rndis,diag,diag_mdm,diag_qsc && property:sys.usb.conf
     write /sys/class/android_usb/android0/functions rndis,diag
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state rndis
+
+on post-fs
+    setprop sys.usb.ffs.aio_compat 1
 
 on property:sys.usb.config=rndis,diag,diag_mdm,diag_qsc,adb && property:sys.usb.configfs=0
     write /sys/class/android_usb/android0/enable 0

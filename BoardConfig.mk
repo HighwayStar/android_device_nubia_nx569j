@@ -18,6 +18,9 @@
 
 DEVICE_PATH := device/nubia/nx569j
 
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := nx569j,NX569J
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 

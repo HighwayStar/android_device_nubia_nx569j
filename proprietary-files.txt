@@ -14,15 +14,7 @@ etc/camera/s5k3p3_chromatix.xml
 etc/camera/msm8976pro_camera_imx258dual_s5k3p3.xml
 
 # Camera common firmware
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_4_0.fw
-etc/firmware/cpp_firmware_v1_5_0.fw
 etc/firmware/cpp_firmware_v1_5_1.fw
-etc/firmware/cpp_firmware_v1_6_0.fw
-etc/firmware/cpp_firmware_v1_8_0.fw
-etc/firmware/cpp_firmware_v1_10_0.fw
 
 # Camera nubia firmware
 etc/firmware/miniBoot.bin
@@ -391,7 +383,3 @@ vendor/firmware/Generic_unsigned_OK.ncd
 etc/firmware/nubia_tp_jdi_fw.img
 etc/firmware/nubia_tp_ofilm_fw_ctcr.img
 etc/firmware/nubia_tp_ofilm_fw_ctct.img
-
-# USB firmware
-etc/firmware/ice40.bin
-

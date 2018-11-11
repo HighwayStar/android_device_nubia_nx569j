@@ -30,6 +30,14 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/.tp/.thermal-mode-00-01.conf:/system/etc/.tp/.thermal-mode-00-01.conf \
+    $(LOCAL_PATH)/configs/.tp/.thermal-mode-00-02.conf:/system/etc/.tp/.thermal-mode-00-02.conf \
+    $(LOCAL_PATH)/configs/.tp/.thermal-mode-00-03.conf:/system/etc/.tp/.thermal-mode-00-03.conf \
+    $(LOCAL_PATH)/configs/.tp/.thermal-mode-00-04.conf:/system/etc/.tp/.thermal-mode-00-04.conf \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+
 # Ramdisk nubia specific
 PRODUCT_PACKAGES += \
     init.nb.device.rc

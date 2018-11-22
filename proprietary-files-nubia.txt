@@ -25,7 +25,6 @@ etc/firmware/SCTable.asb
 bin/mm-qcamera-daemon
 vendor/lib/libAltek_AF.so
 vendor/lib/libchromaflash.so
-vendor/lib/libfastcvopt.so
 vendor/lib/libIAFalSDE1.so
 vendor/lib/libIQ_Match_Lib.so
 vendor/lib/libllvd_smore.so

@@ -1,11 +1,9 @@
 # ADSP
-vendor/lib/libadsprpc.so
-lib/libqvr_adsp_driver_stub.so
-vendor/lib64/libadsprpc.so
 vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
+vendor/lib/libfastcvopt.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 

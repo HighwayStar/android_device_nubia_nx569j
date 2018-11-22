@@ -213,9 +213,11 @@ vendor/lib/libchromatix_imx258_main_cpp_microspur.so
 vendor/lib/libchromatix_imx258_main_cpp_mtf_denoise.so
 vendor/lib/libchromatix_imx258_main_cpp_panorama.so
 vendor/lib/libchromatix_imx258_main_cpp_preview.so
+vendor/lib/libchromatix_imx258_main_cpp_preview_clone.so
 vendor/lib/libchromatix_imx258_main_cpp_snapshot_electfno.so
 vendor/lib/libchromatix_imx258_main_cpp_snapshot_lightdraw.so
 vendor/lib/libchromatix_imx258_main_cpp_snapshot.so
+vendor/lib/libchromatix_imx258_main_cpp_snapshot_clone.so
 vendor/lib/libchromatix_imx258_main_cpp_video_4k.so
 vendor/lib/libchromatix_imx258_main_cpp_video.so
 vendor/lib/libchromatix_imx258_main_isp_bokeh_20fps.so

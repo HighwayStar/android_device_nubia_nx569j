@@ -1,6 +1,6 @@
 Copyright 2018 - The LineageOS Project
 
-Device configuration for Letv LeEco Le 2 (International).
+Device configuration for ZTE nubia Z17 mini
 =======================================================
 
 Basic   | Spec Sheet

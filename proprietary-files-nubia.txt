@@ -272,7 +272,7 @@ lib64/libfpservice.so:vendor/lib64/libfpservice.so
 
 
 # NFC
-lib64/hw/nfc_nci.bcm2079x.default.so:vendor/lib64/hw/nfc_nci.bcm2079x.default.so
+lib64/hw/nfc_nci.bcm2079x.default.so:vendor/lib64/hw/nfc_nci.bcm2079x.default.so|265bfb5be9efa535596999b233b513011c5cb3bd
 vendor/firmware/Generic_unsigned_70ms.ncd
 vendor/firmware/Generic_unsigned_119_1.ncd
 vendor/firmware/Generic_unsigned_NVM.ncd

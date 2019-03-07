@@ -16,10 +16,7 @@
 
 #define LOG_TAG "biometrics.fingerprint@2.0-service"
 
-#include <binder/IPCThreadState.h>
-#include <binder/IServiceManager.h>
-#include <binder/PermissionCache.h>
-#include <utils/String16.h>
+#include <binder/ProcessState.h>
 
 #include <android/log.h>
 #include <hidl/HidlSupport.h>
@@ -41,8 +38,12 @@ int main() {
     ALOGI("Start biometrics");
     android::sp<IBiometricsFingerprint> bio = BiometricsFingerprint::getInstance();
 
+    // the conventional HAL might start binder services
+    android::ProcessState::initWithDriver("/dev/binder");
+    android::ProcessState::self()->startThreadPool();
+
     /* process Binder transaction as a single-threaded program. */
-    configureRpcThreadpool(1, false /* callerWillJoin */);
+    configureRpcThreadpool(1, true /* callerWillJoin */);
 
     if (bio != nullptr) {
         android::status_t ret = bio->registerAsService();
@@ -53,8 +54,7 @@ int main() {
         ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
     }
 
-    /* ensure that gx_fpd will be able to send IPC calls to this process */
-    android::IPCThreadState::self()->joinThreadPool();
+    joinRpcThreadpool();
 
     return 0; // should never get here
 }

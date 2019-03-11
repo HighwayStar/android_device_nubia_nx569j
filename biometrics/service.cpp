@@ -28,7 +28,6 @@
 #include <android/hardware/biometrics/fingerprint/2.1/types.h>
 
 #include "BiometricsFingerprint.h"
-#include "fingerprintd/FingerprintDaemonProxy.h"
 
 using android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint;
 using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
@@ -38,16 +37,6 @@ using android::sp;
 
 
 int main() {
-
-    ALOGI("Start fingerprintd");
-    android::sp<android::IServiceManager> serviceManager = android::defaultServiceManager();
-    android::sp<android::FingerprintDaemonProxy> proxy =
-            android::FingerprintDaemonProxy::getInstance();
-    android::status_t ret = serviceManager->addService(
-            android::FingerprintDaemonProxy::descriptor, proxy);
-    if (ret != android::OK) {
-        ALOGE("Couldn't register fingerprintd binder service!");
-    }
 
     ALOGI("Start biometrics");
     android::sp<IBiometricsFingerprint> bio = BiometricsFingerprint::getInstance();
@@ -64,7 +53,8 @@ int main() {
         ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
     }
 
-    android::IPCThreadState::self()->joinThreadPool();   // run binder service fingerprintd part
+    /* ensure that gx_fpd will be able to send IPC calls to this process */
+    android::IPCThreadState::self()->joinThreadPool();
 
     return 0; // should never get here
 }

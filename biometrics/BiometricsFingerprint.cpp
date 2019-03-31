@@ -42,7 +42,6 @@ BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevice(nullptr) {
     sInstance = this; // keep track of the most recent instance
 
-    is_goodix = true;
     mDevice = openHal();
 
     if (!mDevice) {
@@ -235,7 +234,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
     }
     int ret = mDevice->set_active_group(mDevice, gid, storePath.c_str());
     /* set active group hack for goodix */
-    if ((ret > 0) && is_goodix)
+    if (ret > 0)
         ret = 0;
     return ErrorFilter(ret);
 }

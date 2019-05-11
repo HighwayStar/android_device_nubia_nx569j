@@ -574,10 +574,10 @@ service start_hci_filter /system/vendor/bin/wcnss_filter
     writepid /dev/cpuset/system-background/tasks
 
 # FM
-on property:hw.fm.init=0
+on property:vendor.hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
 
-on property:hw.fm.init=1
+on property:vendor.hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
 service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0

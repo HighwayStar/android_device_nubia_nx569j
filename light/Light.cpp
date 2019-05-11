@@ -225,10 +225,19 @@ void Light::setSpeakerBatteryLightLocked() {
 void Light::setSpeakerLightBlinkingLocked(const LightState&) {
 
     // Disable all blinking to start
+#ifdef NO_HOME_LED
     setButtonsblinking(false, false);
+#else
     setHomeBlinking(false, false);
+#endif
 
+//if no home
+#ifdef NO_HOME_LED
     setButtonsblinking(true, true);
+#else
+    setHomeBlinking(true, true);
+#endif
+
 }
 
 void Light::setSpeakerLightConstLocked(const LightState&) {
@@ -238,6 +247,7 @@ void Light::setSpeakerLightConstLocked(const LightState&) {
     setHomeBlinking(false, false);
 
     setButtonsblinking(true, false);
+    setHomeBlinking(true, false);
 }
 
 }  // namespace implementation
